@@ -8,6 +8,7 @@
 /hardware/blackpkb/*.kicad_pcb-bak
 /hardware/blackpkb/*.sch-bak
 /hardware/blackpkb/*~
+/hardware/blackpkb/*.lck
 /hardware/blackpkb/_autosave-*
 /hardware/blackpkb/*.tmp
 /hardware/blackpkb/*-save.pro
