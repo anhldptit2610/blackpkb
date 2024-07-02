@@ -20,3 +20,5 @@
 /hardware/blackpkb/*.dsn
 /hardware/blackpkb/*.ses
 /hardware/blackpkb/*.zip
+/hardware/blackpkb/*.drl
+/hardware/manufactoring/*

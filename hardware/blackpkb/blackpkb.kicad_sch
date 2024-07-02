@@ -11,6 +11,299 @@
 		(company "author - alcato")
 	)
 	(lib_symbols
+		(symbol "Device:LED_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at -1.27 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "LED_Small"
+				(at -4.445 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode light-emitting-diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_Small_0_1"
+				(polyline
+					(pts
+						(xy -0.762 -1.016) (xy -0.762 1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy -0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.016) (xy -0.762 0) (xy 0.762 1.016) (xy 0.762 -1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy -0.508 1.27) (xy -0.254 1.27) (xy -0.508 1.27) (xy -0.508 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 1.27) (xy 0 1.778) (xy 0.254 1.778) (xy 0 1.778) (xy 0 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_Small_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 1.778)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 1.778)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:R_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0.762 0.508 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "R_Small"
+				(at 0.762 -1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Small_0_1"
+				(rectangle
+					(start -0.762 1.778)
+					(end 0.762 -1.778)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:RotaryEncoder_Switch"
 			(pin_names
 				(offset 0.254) hide)
@@ -2429,6 +2722,126 @@
 				)
 			)
 		)
+		(symbol "power:+3.3V"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3.3V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3.3V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3.3V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:PWR_FLAG"
 			(power)
 			(pin_numbers hide)
@@ -2533,6 +2946,12 @@
 		(uuid "09613ae0-9653-4f19-be90-1fdcf6c93d02")
 	)
 	(junction
+		(at 163.83 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "12aca719-3070-4fef-8de1-f5679c1d9863")
+	)
+	(junction
 		(at 135.89 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2543,12 +2962,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2c71d2bb-1bfa-465d-84d2-5f53cc7b98ae")
-	)
-	(junction
-		(at 135.89 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3e1e967f-6709-4d9a-9f65-5993671db91a")
 	)
 	(junction
 		(at 127 44.45)
@@ -2563,46 +2976,10 @@
 		(uuid "49c0f538-a75c-4d14-bae4-647027b58617")
 	)
 	(junction
-		(at 149.86 58.42)
+		(at 157.48 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "616ac76f-f5ae-420e-b6a8-42aa12145977")
-	)
-	(junction
-		(at 140.97 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6ab98e22-8daf-4467-a9ef-c4f29e3231e4")
-	)
-	(junction
-		(at 149.86 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6af9da80-cccf-4265-b586-ee4e8fa6a398")
-	)
-	(junction
-		(at 144.78 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8b248509-deef-4695-bf33-6415d726b43c")
-	)
-	(junction
-		(at 132.08 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "91045943-df45-4e2b-8d52-4a116c3df523")
-	)
-	(junction
-		(at 153.67 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "963a948f-b772-47fb-beea-ea9fe8297dc1")
-	)
-	(junction
-		(at 127 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b3335926-6e48-48c3-8ffe-212673ce3338")
+		(uuid "610dc809-8e61-48e9-adbb-3231af35ef5d")
 	)
 	(junction
 		(at 132.08 76.2)
@@ -2611,22 +2988,16 @@
 		(uuid "e26e161c-c996-46f9-9b0e-ff1432994444")
 	)
 	(junction
-		(at 149.86 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ebfd3fa5-2474-4752-88e0-f171798b864e")
-	)
-	(junction
 		(at 132.08 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f5cf2542-4b46-4724-a785-583ff0280598")
 	)
 	(junction
-		(at 153.67 44.45)
+		(at 157.48 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "fd76b414-ef01-440d-84b5-e435b4c0ebb1")
+		(uuid "f7042450-276e-47ff-87d3-ef95b00914f4")
 	)
 	(no_connect
 		(at 38.1 52.07)
@@ -2649,16 +3020,16 @@
 		(uuid "29212f62-e88e-48d2-8d31-cf80dcbec51a")
 	)
 	(no_connect
+		(at 83.82 72.39)
+		(uuid "38f357b3-a020-4c32-a036-9eedcd697629")
+	)
+	(no_connect
 		(at 38.1 80.01)
 		(uuid "3b372768-397e-41da-9256-6d0874f74c10")
 	)
 	(no_connect
 		(at 83.82 82.55)
 		(uuid "40bfef9d-d39a-4204-97fb-980758480f60")
-	)
-	(no_connect
-		(at 83.82 90.17)
-		(uuid "42e8b509-88e8-4fbb-957e-bb5f2be74071")
 	)
 	(no_connect
 		(at 83.82 52.07)
@@ -2709,6 +3080,10 @@
 		(uuid "9b00359d-d0d8-4c7c-9ae3-a7b1f6262bb4")
 	)
 	(no_connect
+		(at 83.82 49.53)
+		(uuid "9e757a7e-c6af-4cd9-8d7c-5df73f26a09e")
+	)
+	(no_connect
 		(at 38.1 85.09)
 		(uuid "9f755fcc-99ee-466f-bd98-0961c37fb13a")
 	)
@@ -2717,20 +3092,12 @@
 		(uuid "a28721c7-4e06-45ab-a35b-d72d9003f48a")
 	)
 	(no_connect
-		(at 38.1 72.39)
-		(uuid "a373b155-7437-4b6c-ad87-0e53effd89ef")
-	)
-	(no_connect
 		(at 83.82 64.77)
 		(uuid "a977a8d5-33f1-41e3-9a10-5bd497710f52")
 	)
 	(no_connect
 		(at 83.82 77.47)
 		(uuid "b85f9400-f646-46c9-8aac-8ee59be6e73e")
-	)
-	(no_connect
-		(at 38.1 74.93)
-		(uuid "bc97b015-e23c-4c51-98ce-1cc6271f5e1b")
 	)
 	(no_connect
 		(at 38.1 87.63)
@@ -2749,22 +3116,18 @@
 		(uuid "d6767fa2-c213-424c-a79f-e489fda7e7f5")
 	)
 	(no_connect
-		(at 38.1 77.47)
-		(uuid "dd6a1848-a272-4f1d-b643-cec6c41e8742")
-	)
-	(no_connect
 		(at 38.1 82.55)
 		(uuid "fbe31bc6-26e4-471d-a02e-ee0ac8d7850a")
 	)
 	(wire
 		(pts
-			(xy 153.67 41.91) (xy 153.67 44.45)
+			(xy 157.48 85.09) (xy 157.48 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0d43de8b-9898-484c-9314-3a9e49e92658")
+		(uuid "03514bc7-2449-4fce-a14c-80776a625294")
 	)
 	(wire
 		(pts
@@ -2775,6 +3138,16 @@
 			(type default)
 		)
 		(uuid "0dea2497-253c-4029-80b7-e885118e9c1b")
+	)
+	(wire
+		(pts
+			(xy 157.48 68.58) (xy 157.48 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14bbc81f-aa5c-4fc2-a2f7-e478254c0d1b")
 	)
 	(wire
 		(pts
@@ -2798,13 +3171,13 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 72.39) (xy 92.71 72.39)
+			(xy 26.67 72.39) (xy 38.1 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "22311735-e824-4d40-b9b4-ee3a6b418086")
+		(uuid "27b98969-fc3f-4f89-9f2e-bfbdf4dfe750")
 	)
 	(wire
 		(pts
@@ -2818,13 +3191,13 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 93.98) (xy 140.97 93.98)
+			(xy 163.83 85.09) (xy 163.83 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2b86d7cd-9ac5-4456-972d-72cefd65cb96")
+		(uuid "2f6af423-7eed-4836-9b58-20e16d99b4c1")
 	)
 	(wire
 		(pts
@@ -2858,16 +3231,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 62.23) (xy 135.89 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "383b99e3-31a7-4ad0-b6b2-6e160a13594d")
-	)
-	(wire
-		(pts
 			(xy 149.86 130.81) (xy 162.56 130.81)
 		)
 		(stroke
@@ -2875,6 +3238,16 @@
 			(type default)
 		)
 		(uuid "3ecddb50-ede6-44ca-87e4-47c45bd87c92")
+	)
+	(wire
+		(pts
+			(xy 170.18 72.39) (xy 170.18 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45fb590c-c281-4fc5-b328-e1e855b2ca26")
 	)
 	(wire
 		(pts
@@ -2888,13 +3261,33 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 85.09) (xy 149.86 86.36)
+			(xy 157.48 69.85) (xy 157.48 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4ebe48cc-9077-4e9b-ae46-d1b6e25af3f8")
+		(uuid "4e5bea23-060e-4e5d-b7f8-ddf2d0379c7f")
+	)
+	(wire
+		(pts
+			(xy 157.48 78.74) (xy 157.48 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54fdbd21-69c5-4d9c-87ad-e76d549680c5")
+	)
+	(wire
+		(pts
+			(xy 157.48 72.39) (xy 157.48 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e0a8afe-fa6b-484f-92e1-e3e4f752707a")
 	)
 	(wire
 		(pts
@@ -2908,16 +3301,6 @@
 	)
 	(wire
 		(pts
-			(xy 127 62.23) (xy 127 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "680587e6-e9b6-464e-8d53-f36607915340")
-	)
-	(wire
-		(pts
 			(xy 144.78 41.91) (xy 144.78 44.45)
 		)
 		(stroke
@@ -2928,16 +3311,6 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 76.2) (xy 158.75 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e092345-2432-423b-9eed-0cd56571c17b")
-	)
-	(wire
-		(pts
 			(xy 140.97 58.42) (xy 149.86 58.42)
 		)
 		(stroke
@@ -2945,6 +3318,16 @@
 			(type default)
 		)
 		(uuid "6ef771e0-621f-4576-a4ee-cae553e2a2d1")
+	)
+	(wire
+		(pts
+			(xy 26.67 74.93) (xy 38.1 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6faf613d-b1fb-4fd7-925b-89103628297d")
 	)
 	(wire
 		(pts
@@ -2968,13 +3351,23 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 85.09) (xy 132.08 86.36)
+			(xy 26.67 77.47) (xy 38.1 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "92f094ba-012c-4e15-a94b-a15757f76d99")
+		(uuid "86d59598-335d-4b8b-9371-019c2ad2b1de")
+	)
+	(wire
+		(pts
+			(xy 163.83 78.74) (xy 163.83 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e28ba5f-0d76-4239-b284-9d5fd507ad99")
 	)
 	(wire
 		(pts
@@ -2988,6 +3381,16 @@
 	)
 	(wire
 		(pts
+			(xy 157.48 72.39) (xy 163.83 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "993181d4-8702-47dc-9ed1-ad0d1e20b7cf")
+	)
+	(wire
+		(pts
 			(xy 135.89 44.45) (xy 135.89 62.23)
 		)
 		(stroke
@@ -2998,16 +3401,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 49.53) (xy 158.75 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9edd3877-00e5-40d1-baa5-ca82f0a2fcd0")
-	)
-	(wire
-		(pts
 			(xy 119.38 76.2) (xy 132.08 76.2)
 		)
 		(stroke
@@ -3015,16 +3408,6 @@
 			(type default)
 		)
 		(uuid "9f22318e-5968-4716-8b7a-d15943aa50d7")
-	)
-	(wire
-		(pts
-			(xy 149.86 93.98) (xy 158.75 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a711d793-3cb0-4d6b-be50-4a16d02abcb8")
 	)
 	(wire
 		(pts
@@ -3048,16 +3431,6 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 44.45) (xy 153.67 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "add71346-1956-44c2-9c76-04b8053233bf")
-	)
-	(wire
-		(pts
 			(xy 83.82 69.85) (xy 92.71 69.85)
 		)
 		(stroke
@@ -3078,13 +3451,13 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 67.31) (xy 158.75 68.58)
+			(xy 170.18 85.09) (xy 170.18 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b36a5225-a056-447a-845d-afc9eb836844")
+		(uuid "b32d68c5-b8ca-4c60-aca4-b7c924957345")
 	)
 	(wire
 		(pts
@@ -3108,6 +3481,16 @@
 	)
 	(wire
 		(pts
+			(xy 170.18 78.74) (xy 170.18 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6251cc2-cbeb-43b8-a5a2-95adac5babb4")
+	)
+	(wire
+		(pts
 			(xy 144.78 44.45) (xy 144.78 62.23)
 		)
 		(stroke
@@ -3118,16 +3501,6 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 62.23) (xy 153.67 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bdfc052c-38b1-416f-bed7-9ca063576563")
-	)
-	(wire
-		(pts
 			(xy 135.89 41.91) (xy 135.89 44.45)
 		)
 		(stroke
@@ -3135,26 +3508,6 @@
 			(type default)
 		)
 		(uuid "be41a4bc-cd07-45d5-8dd0-6fc4311931fe")
-	)
-	(wire
-		(pts
-			(xy 140.97 93.98) (xy 149.86 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf18e66e-fa62-4f95-a1e3-aa87c72d4abf")
-	)
-	(wire
-		(pts
-			(xy 149.86 58.42) (xy 158.75 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c4b12707-4eb4-4679-9d69-cb3f531075ea")
 	)
 	(wire
 		(pts
@@ -3178,16 +3531,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 85.09) (xy 158.75 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce86d69f-6749-4dbd-9d92-30c9558c17bb")
-	)
-	(wire
-		(pts
 			(xy 121.92 125.73) (xy 134.62 125.73)
 		)
 		(stroke
@@ -3208,13 +3551,23 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 85.09) (xy 140.97 86.36)
+			(xy 163.83 72.39) (xy 170.18 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d86f5ca3-c5b1-496c-bad9-fbf446f094a7")
+		(uuid "d4f05d7e-dafa-45ed-92b0-2dd8a0a08ce8")
+	)
+	(wire
+		(pts
+			(xy 83.82 90.17) (xy 90.17 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5b26d56-e12a-4405-bbaa-cdfa044d2170")
 	)
 	(wire
 		(pts
@@ -3225,16 +3578,6 @@
 			(type default)
 		)
 		(uuid "ee37968c-257c-4105-ab45-8872b82dc633")
-	)
-	(wire
-		(pts
-			(xy 144.78 62.23) (xy 144.78 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef99b4ea-cc2b-4247-8996-aa28a3c26d82")
 	)
 	(wire
 		(pts
@@ -3258,13 +3601,13 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 49.53) (xy 92.71 49.53)
+			(xy 163.83 72.39) (xy 163.83 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fa81ae41-c9a1-4309-9ed3-8f7706a4ab9a")
+		(uuid "f9b12f2f-d93b-414a-8711-7972312484a8")
 	)
 	(wire
 		(pts
@@ -3275,16 +3618,6 @@
 			(type default)
 		)
 		(uuid "fd51dac3-193b-4216-8cde-a24574397fb1")
-	)
-	(wire
-		(pts
-			(xy 119.38 93.98) (xy 132.08 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe40d047-9268-4e09-bfa2-616d2aa5f754")
 	)
 	(rectangle
 		(start 25.4 25.4)
@@ -3426,17 +3759,6 @@
 		)
 		(uuid "16c07464-efce-44bf-bcfe-0f0c9f2215c4")
 	)
-	(label "ROW_3"
-		(at 119.38 93.98 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "29de459d-801a-41e4-9543-aec380d11395")
-	)
 	(label "COL_3"
 		(at 92.71 46.99 180)
 		(fields_autoplaced yes)
@@ -3469,6 +3791,17 @@
 			(justify right bottom)
 		)
 		(uuid "3c5cdaa1-6c33-486a-8caf-9f0155156620")
+	)
+	(label "LED_YELLOW"
+		(at 26.67 72.39 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3cce0738-c80e-40d5-9f2a-a52a052d784c")
 	)
 	(label "COL_1"
 		(at 92.71 41.91 180)
@@ -3503,17 +3836,6 @@
 		)
 		(uuid "475fee77-5fc5-435c-bd8f-4ebb52a2ca00")
 	)
-	(label "COL_4"
-		(at 92.71 49.53 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "4f0fc327-e2d0-45a6-83db-6506235f8e6a")
-	)
 	(label "GND"
 		(at 92.71 87.63 180)
 		(fields_autoplaced yes)
@@ -3525,16 +3847,27 @@
 		)
 		(uuid "52577198-2653-4be9-b37f-f3448cd118d9")
 	)
-	(label "COL_4"
-		(at 153.67 41.91 180)
+	(label "LED_RED"
+		(at 26.67 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "7aad0ccc-f343-4ecd-b07c-0de6788ef95d")
+		(uuid "6c6000a4-53cd-4736-8148-6322bcc9a361")
+	)
+	(label "LED_GREEN"
+		(at 26.67 74.93 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8b9bfc5e-8515-4d35-8bc2-e7392ae71658")
 	)
 	(label "ENCODER_S1"
 		(at 25.4 54.61 0)
@@ -3580,8 +3913,8 @@
 		)
 		(uuid "afe27b98-9a11-4301-b204-31ac5868b4ee")
 	)
-	(label "ROW_3"
-		(at 92.71 72.39 180)
+	(label "LED_YELLOW"
+		(at 157.48 86.36 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3589,7 +3922,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c5b4dc46-07c0-45b2-9c59-f1f0732e83fa")
+		(uuid "c6c8614c-8820-402b-ba44-79b32cbaa6c6")
 	)
 	(label "COL_2"
 		(at 92.71 44.45 180)
@@ -3635,6 +3968,17 @@
 		)
 		(uuid "df9ecf2d-b200-4718-a3ca-0f336f5ec7f7")
 	)
+	(label "LED_RED"
+		(at 170.18 86.36 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f28d57b5-7978-45ae-82e5-80cba9bf671b")
+	)
 	(label "ENCODER_A"
 		(at 121.92 125.73 0)
 		(fields_autoplaced yes)
@@ -3645,6 +3989,17 @@
 			(justify left bottom)
 		)
 		(uuid "f7163148-a5a1-4430-ada4-929818915ae0")
+	)
+	(label "LED_GREEN"
+		(at 163.83 86.36 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ff203520-e940-491d-8448-c0f7bfa68470")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push_45deg")
@@ -3715,33 +4070,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push_45deg")
-		(at 156.21 46.99 0)
+		(lib_id "Device:LED_Small")
+		(at 157.48 82.55 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0d7b776b-8528-4c54-86f7-9ac67f49de86")
-		(property "Reference" "SW4"
-			(at 156.21 43.434 0)
+		(uuid "1d31ca95-163a-4e06-97eb-c3346eaec118")
+		(property "Reference" "D4"
+			(at 159.258 81.534 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "SW_Push_45deg"
-			(at 156.21 41.91 0)
+		(property "Value" "LED_Small"
+			(at 158.75 83.312 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
-			(at 156.21 46.99 0)
+		(property "Footprint" "LED_THT:LED_D3.0mm"
+			(at 157.48 82.55 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3750,7 +4107,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 156.21 46.99 0)
+			(at 157.48 82.55 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3758,76 +4115,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
-			(at 156.21 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "43563503-cfa3-46d9-9948-6dce5391ef01")
-		)
-		(pin "1"
-			(uuid "59cba3ab-a28f-457c-95da-a0c0932014c2")
-		)
-		(instances
-			(project "bluepkb"
-				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "SW4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push_45deg")
-		(at 156.21 82.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0f849c5c-9af8-41d5-83a2-57efeff1b26c")
-		(property "Reference" "SW12"
-			(at 156.21 78.994 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push_45deg"
-			(at 156.21 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
-			(at 156.21 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 156.21 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
-			(at 156.21 82.55 0)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 157.48 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3836,15 +4125,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "5ab9ff0b-392b-4e8c-abf5-49ef611fabad")
+			(uuid "85c808e3-9242-4d4d-8c47-a2e1220434a3")
 		)
 		(pin "1"
-			(uuid "c023819a-75bb-4f70-8937-ffbe0a4f0d45")
+			(uuid "336911a1-8d46-406a-9462-b5e032b74946")
 		)
 		(instances
-			(project "bluepkb"
+			(project ""
 				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "SW12")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -4136,6 +4425,142 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 163.83 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "33036db5-5728-445a-93b8-bf6103d7b851")
+		(property "Reference" "R2"
+			(at 165.1 75.438 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 165.1 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 163.83 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 163.83 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9829aaa4-efd3-4532-b5af-20b3f233f388")
+		)
+		(pin "1"
+			(uuid "4bd9f66e-0bdb-4814-b3f3-b9d127457bc9")
+		)
+		(instances
+			(project "blackpkb"
+				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 157.48 69.85 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "34cae2aa-2667-4479-aeba-4a9c03c37e72")
+		(property "Reference" "#FLG02"
+			(at 159.385 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 161.29 69.8499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 157.48 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 157.48 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e1d94b9c-009d-4bae-a3ae-15b8a0d7c019")
+		)
+		(instances
+			(project ""
+				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push_45deg")
 		(at 138.43 64.77 0)
 		(unit 1)
@@ -4198,6 +4623,76 @@
 			(project "bluepkb"
 				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
 					(reference "SW6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 170.18 82.55 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4590e54c-e944-413f-8bff-a25ed9f7d1fc")
+		(property "Reference" "D9"
+			(at 171.958 81.534 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED_Small"
+			(at 171.45 83.312 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm"
+			(at 170.18 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 170.18 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 170.18 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fa70476a-5b48-40f7-8a60-af21b90f77d2")
+		)
+		(pin "1"
+			(uuid "4f6248d4-3977-4215-b27b-ad6f681c8003")
+		)
+		(instances
+			(project "blackpkb"
+				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -4362,184 +4857,6 @@
 	)
 	(symbol
 		(lib_id "Diode:1N4148")
-		(at 158.75 54.61 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "49b3ea8a-bc72-4315-ba5f-022e3fae87f1")
-		(property "Reference" "D4"
-			(at 161.29 53.3399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 161.036 52.07 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 158.75 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
-			(at 158.75 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "100V 0.15A standard switching diode, DO-35"
-			(at 158.75 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 158.75 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 158.75 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f7bdce33-bdd7-40b6-a255-bc0c11fffa3c")
-		)
-		(pin "2"
-			(uuid "3e2efbfe-63b2-4eef-8e99-c06e0d909ad9")
-		)
-		(instances
-			(project "bluepkb"
-				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 140.97 90.17 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "54eb138b-aa17-47d0-9647-39aad5bb2407")
-		(property "Reference" "D10"
-			(at 143.51 88.8999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 141.224 88.138 90)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 140.97 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
-			(at 140.97 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "100V 0.15A standard switching diode, DO-35"
-			(at 140.97 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 140.97 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 140.97 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2a5e918b-257d-4968-a6b9-cd568571fba3")
-		)
-		(pin "2"
-			(uuid "a6d3777b-a207-41bd-ac90-17d68fb9df84")
-		)
-		(instances
-			(project "bluepkb"
-				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "D10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
 		(at 132.08 72.39 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4628,24 +4945,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push_45deg")
-		(at 129.54 82.55 0)
+		(lib_id "power:+3.3V")
+		(at 157.48 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "65d9c6fe-7b1f-4164-bc9c-693ef7f20b12")
-		(property "Reference" "SW9"
-			(at 129.54 78.994 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push_45deg"
-			(at 129.54 77.47 0)
+		(uuid "6c167a70-68fa-41bc-a3b4-1517cea05dc5")
+		(property "Reference" "#PWR02"
+			(at 157.48 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4653,8 +4962,17 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
-			(at 129.54 82.55 0)
+		(property "Value" "+3.3V"
+			(at 157.226 66.294 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4662,8 +4980,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 129.54 82.55 0)
+		(property "Datasheet" ""
+			(at 157.48 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4671,25 +4989,22 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
-			(at 129.54 82.55 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 157.48 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "af4226d0-9a25-41bd-ad88-36ac54e6898f")
 		)
 		(pin "1"
-			(uuid "9cad7d54-f85d-47ac-979a-8e651c7df107")
+			(uuid "85964d9f-5485-4a3f-a238-14a6c74128cf")
 		)
 		(instances
-			(project "bluepkb"
+			(project "blackpkb"
 				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "SW9")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -4758,6 +5073,76 @@
 			(project "bluepkb"
 				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
 					(reference "SW7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 163.83 82.55 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8b69a772-a172-423e-a238-ee74a51dff24")
+		(property "Reference" "D8"
+			(at 165.608 81.534 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED_Small"
+			(at 165.1 83.312 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm"
+			(at 163.83 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 163.83 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f33057ce-4859-45c0-8da4-9a3f48e40991")
+		)
+		(pin "1"
+			(uuid "350f4b38-14d1-46a1-b079-4a4f141fcee9")
+		)
+		(instances
+			(project "blackpkb"
+				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -4853,163 +5238,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:1N4148")
-		(at 132.08 90.17 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9330d0c1-cdd6-4ee2-9296-26b343f16c37")
-		(property "Reference" "D9"
-			(at 134.62 88.8999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 132.334 88.138 90)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 132.08 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
-			(at 132.08 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "100V 0.15A standard switching diode, DO-35"
-			(at 132.08 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 132.08 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 132.08 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9c1bce76-40db-407a-85ce-c351d0ff54de")
-		)
-		(pin "2"
-			(uuid "0a500e7f-31fc-4e20-8399-43d884a4a034")
-		)
-		(instances
-			(project "bluepkb"
-				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "D9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push_45deg")
-		(at 147.32 82.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "93af45b6-1673-408a-b740-f9dc54232d4b")
-		(property "Reference" "SW11"
-			(at 147.32 78.994 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push_45deg"
-			(at 147.32 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
-			(at 147.32 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 147.32 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
-			(at 147.32 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "28190c4c-2322-42ad-aae8-5874e6e1be8d")
-		)
-		(pin "1"
-			(uuid "017b8093-204c-49bd-8bf5-3c638a313ac6")
-		)
-		(instances
-			(project "bluepkb"
-				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "SW11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_Push_45deg")
 		(at 129.54 46.99 0)
 		(unit 1)
@@ -5072,74 +5300,6 @@
 			(project ""
 				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
 					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push_45deg")
-		(at 156.21 64.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a31894d1-cf75-494f-9bb1-146e69a71d8b")
-		(property "Reference" "SW8"
-			(at 156.21 61.214 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push_45deg"
-			(at 156.21 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
-			(at 156.21 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 156.21 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
-			(at 156.21 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "dc4e71df-374e-48db-a2e1-7912302b6889")
-		)
-		(pin "1"
-			(uuid "b28c2655-5f99-441f-9988-90d3f386a503")
-		)
-		(instances
-			(project "bluepkb"
-				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "SW8")
 					(unit 1)
 				)
 			)
@@ -5229,6 +5389,75 @@
 			(project "bluepkb"
 				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
 					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 170.18 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b7a002ec-d0b0-413c-88f3-e7e30a70cd8f")
+		(property "Reference" "R3"
+			(at 171.45 75.438 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 171.45 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 170.18 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 170.18 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 170.18 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1d8bf978-116e-421d-9fc0-c6dbf32a9f00")
+		)
+		(pin "1"
+			(uuid "5ad79978-a40a-49e4-b92a-a5bb0de15a38")
+		)
+		(instances
+			(project "blackpkb"
+				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -5364,45 +5593,34 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:1N4148")
-		(at 158.75 72.39 90)
+		(lib_id "Device:R_Small")
+		(at 157.48 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "beb7569f-0949-4ae3-af31-6ae7e57f8786")
-		(property "Reference" "D8"
-			(at 161.29 71.1199 90)
+		(uuid "ce14bfc8-2016-40bc-b34b-4cec918ed45d")
+		(property "Reference" "R1"
+			(at 158.75 75.438 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
-				(hide yes)
+				(justify left)
 			)
 		)
-		(property "Value" "1N4148"
-			(at 159.004 70.358 90)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 158.75 72.39 0)
+		(property "Value" "330"
+			(at 158.75 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify left)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
-			(at 158.75 72.39 0)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 157.48 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5410,8 +5628,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100V 0.15A standard switching diode, DO-35"
-			(at 158.75 72.39 0)
+		(property "Datasheet" "~"
+			(at 157.48 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5419,34 +5637,25 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Device" "D"
-			(at 158.75 72.39 0)
+		(property "Description" "Resistor, small symbol"
+			(at 157.48 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 158.75 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "031d45df-aac8-4f10-a5fe-ccc1a58b0651")
 		)
 		(pin "2"
-			(uuid "b33ffdbb-8880-4f22-9100-d96f241ef721")
+			(uuid "7e4fa016-351b-4c44-bad3-e670dc3c703e")
+		)
+		(pin "1"
+			(uuid "8f9a918a-40cc-4a0d-9d1a-5bf5f6457e3d")
 		)
 		(instances
-			(project "bluepkb"
+			(project ""
 				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "D8")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -5737,6 +5946,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 90.17 90.17 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dd1a3059-6af4-40e9-8319-8468e8c741b1")
+		(property "Reference" "#PWR01"
+			(at 86.36 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 92.456 89.916 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 90.17 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "400b3da6-e2f5-488a-b249-6e2d0948a0ea")
+		)
+		(instances
+			(project ""
+				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 52.07 132.08 0)
 		(unit 1)
@@ -5872,252 +6147,6 @@
 			(project ""
 				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
 					(reference "SW13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 158.75 90.17 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fb3d59de-64a6-4e20-877b-428389bafb60")
-		(property "Reference" "D12"
-			(at 161.29 88.8999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 159.004 88.138 90)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 158.75 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
-			(at 158.75 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "100V 0.15A standard switching diode, DO-35"
-			(at 158.75 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 158.75 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 158.75 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1c0d4423-092d-4163-8de9-940908f81b91")
-		)
-		(pin "2"
-			(uuid "89addc27-10db-45f7-b860-6aa7fd9aa32a")
-		)
-		(instances
-			(project "bluepkb"
-				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "D12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 149.86 90.17 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fddff975-6976-460a-8891-89d8a956b5df")
-		(property "Reference" "D11"
-			(at 152.4 88.8999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 150.114 88.138 90)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 149.86 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
-			(at 149.86 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "100V 0.15A standard switching diode, DO-35"
-			(at 149.86 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 149.86 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 149.86 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bfd4d21a-1c6e-4cd1-851d-13fcee4533c7")
-		)
-		(pin "2"
-			(uuid "7f3a7080-1c42-4eff-a655-1053ff2595ed")
-		)
-		(instances
-			(project "bluepkb"
-				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "D11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push_45deg")
-		(at 138.43 82.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ff75c8d3-61ca-4896-a4b5-e45adced56a4")
-		(property "Reference" "SW10"
-			(at 138.43 78.994 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push_45deg"
-			(at 138.43 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
-			(at 138.43 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 138.43 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
-			(at 138.43 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a8ac6389-a169-4dc5-b632-4ef0e40d77cc")
-		)
-		(pin "1"
-			(uuid "1e775b23-3e7a-4c46-9a29-6f1e317e1374")
-		)
-		(instances
-			(project "bluepkb"
-				(path "/1e3ad0cd-5761-49e7-857d-2f881da63fce"
-					(reference "SW10")
 					(unit 1)
 				)
 			)
