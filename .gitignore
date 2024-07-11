@@ -22,3 +22,4 @@
 /hardware/blackpkb/*.zip
 /hardware/blackpkb/*.drl
 /hardware/manufactoring/*
+/firmware/blackpkb/firmware/blackpkb/build
