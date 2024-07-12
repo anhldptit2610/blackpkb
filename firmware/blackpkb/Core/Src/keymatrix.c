@@ -12,6 +12,7 @@ typedef struct {
 } macropad_key_t;
 
 extern key_profile_t profileList[][KEYMATRIX_ROW][KEYMATRIX_COL];
+extern int whichProfile;
 
 #define UP      1
 #define DOWN    0
@@ -47,8 +48,8 @@ static bool keymatrix_is_key_pressed(int row, int col)
 
 void keymatrix_send_key(uint8_t row, uint8_t col)
 {
-    report.modifier = profileList[BLACKPKB_PROFILE][row][col].modifier;
-    report.key1 = profileList[BLACKPKB_PROFILE][row][col].key;
+    report.modifier = profileList[whichProfile][row][col].modifier;
+    report.key1 = profileList[whichProfile][row][col].key;
     USBD_HID_SendReport(&hUsbDeviceFS, report.instance, 8);
     HAL_Delay(20);
     report.modifier = 0x00;
@@ -78,6 +79,8 @@ void keymatrix_init(void)
     keyMatrix[1][0].port = keyMatrix[1][1].port = keyMatrix[1][2].port = ROW_2_GPIO_Port;
     keyMatrix[0][0].pin = keyMatrix[0][1].pin = keyMatrix[0][2].pin = ROW_1_Pin;
     keyMatrix[1][0].pin = keyMatrix[1][1].pin = keyMatrix[1][2].pin = ROW_2_Pin;
+
+    profile_select(BROWSER_PROFILE);
 
     for (int i = 0; i < KEYMATRIX_ROW; i++)
         for (int j = 0; j < KEYMATRIX_COL; j++)

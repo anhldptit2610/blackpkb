@@ -9,6 +9,7 @@ typedef enum {
     BROWSER_PROFILE
 } matrix_profile_t;
 
-#define BLACKPKB_PROFILE        BROWSER_PROFILE
+int get_profile_number(void);
+void profile_select(int profile);
 
 #endif

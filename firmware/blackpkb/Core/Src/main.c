@@ -26,6 +26,7 @@
 #include "usbd_hid.h"
 #include "keycode.h"
 #include "keymatrix.h"
+#include "profile.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,6 +48,7 @@
 
 /* USER CODE BEGIN PV */
 bool matrix[KEYMATRIX_ROW][KEYMATRIX_COL];
+int matrixProfile = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -58,7 +60,12 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void matrix_reset(void)
+{
+  for (int i = 0; i < KEYMATRIX_ROW; i++)
+    for (int j = 0; j < KEYMATRIX_COL; j++)
+      matrix[i][j] = 0;
+}
 /* USER CODE END 0 */
 
 /**
@@ -92,9 +99,7 @@ int main(void)
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
   keymatrix_init();
-  for (int i = 0; i < KEYMATRIX_ROW; i++)
-    for (int j = 0; j < KEYMATRIX_COL; j++)
-      matrix[i][j] = 0;
+  matrix_reset();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,10 +110,16 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     keymatrix_scan(matrix);
-    for (int i = 0; i < KEYMATRIX_ROW; i++) {
-      for (int j = 0; j < KEYMATRIX_COL; j++) {
-        if (matrix[i][j])
-          keymatrix_send_key(i, j);
+    if (matrix[0][0] && matrix[1][0] && matrix[0][1] && matrix[1][1]) {
+      profile_select(matrixProfile);
+      matrixProfile = (matrixProfile + 1) % get_profile_number();
+      matrix_reset();
+    } else {
+      for (int i = 0; i < KEYMATRIX_ROW; i++) {
+        for (int j = 0; j < KEYMATRIX_COL; j++) {
+          if (matrix[i][j])
+            keymatrix_send_key(i, j);
+        }
       }
     }
     HAL_Delay(100);

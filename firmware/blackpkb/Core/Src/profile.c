@@ -1,5 +1,7 @@
 #include "profile.h"
 
+int whichProfile;
+
 key_profile_t profileList[][KEYMATRIX_ROW][KEYMATRIX_COL] = {
     [kiCAD_PROFILE] = {
         [0][0] = {.modifier = KEY_NONE, .key = KEY_0},
@@ -19,3 +21,13 @@ key_profile_t profileList[][KEYMATRIX_ROW][KEYMATRIX_COL] = {
     },
     {}
 };
+
+int get_profile_number(void)
+{
+    return sizeof(profileList) / sizeof(profileList[0]);
+}
+
+void profile_select(int profile)
+{
+    whichProfile = profile;
+}
