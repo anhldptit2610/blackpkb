@@ -22,6 +22,6 @@
 /hardware/blackpkb/*.zip
 /hardware/blackpkb/*.drl
 /hardware/manufactoring/*
-/firmware/blackpkb/firmware/blackpkb/build
-/firmware/blackpkb/firmware/blackpkb/compile_commands.json
+/firmware/blackpkb/build
+/firmware/blackpkb/compile_commands.json
 
