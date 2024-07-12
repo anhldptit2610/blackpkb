@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "keymatrix.h": "c",
+        "main.h": "c",
+        "stdbool.h": "c"
+    }
+}

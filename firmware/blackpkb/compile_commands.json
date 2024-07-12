@@ -1,0 +1,36 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m4",
+      "-mthumb",
+      "-mfpu=fpv4-sp-d16",
+      "-mfloat-abi=hard",
+      "-DUSE_HAL_DRIVER",
+      "-DSTM32F411xE",
+      "-ICore/Inc",
+      "-IDrivers/STM32F4xx_HAL_Driver/Inc",
+      "-IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+      "-IDrivers/CMSIS/Device/ST/STM32F4xx/Include",
+      "-IDrivers/CMSIS/Include",
+      "-IUSB_DEVICE/App",
+      "-IUSB_DEVICE/Target",
+      "-IMiddlewares/ST/STM32_USB_Device_Library/Core/Inc",
+      "-IMiddlewares/ST/STM32_USB_Device_Library/Class/HID/Inc",
+      "-Og",
+      "-Wall",
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-g",
+      "-gdwarf-2",
+      "-Wa,-a,-ad,-alms=build/main.lst",
+      "-o",
+      "build/main.o",
+      "Core/Src/main.c"
+    ],
+    "directory": "/home/anhld/Projects/blackpkb/firmware/blackpkb",
+    "file": "/home/anhld/Projects/blackpkb/firmware/blackpkb/Core/Src/main.c",
+    "output": "/home/anhld/Projects/blackpkb/firmware/blackpkb/build/main.o"
+  }
+]

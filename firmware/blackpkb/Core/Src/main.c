@@ -24,6 +24,8 @@
 /* USER CODE BEGIN Includes */
 #include <stdbool.h>
 #include "usbd_hid.h"
+#include "keycode.h"
+#include "keymatrix.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,9 +46,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-bool oldState = false, newState = false;
-uint8_t buffer[8];
-extern USBD_HandleTypeDef hUsbDeviceFS;
+bool matrix[KEYMATRIX_ROW][KEYMATRIX_COL];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -91,15 +91,10 @@ int main(void)
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
-  buffer[0] = 1;  // report ID
-  buffer[1] = 0;  // modifier
-  buffer[2] = 0;  // reserved
-  buffer[3] = 0;
-  buffer[4] = 0;
-  buffer[5] = 0;
-  buffer[6] = 0;
-  buffer[7] = 0;
-
+  keymatrix_init();
+  for (int i = 0; i < KEYMATRIX_ROW; i++)
+    for (int j = 0; j < KEYMATRIX_COL; j++)
+      matrix[i][j] = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -109,19 +104,18 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    HAL_GPIO_WritePin(COL_1_GPIO_Port, COL_1_Pin, 1);
-    newState = HAL_GPIO_ReadPin(ROW_1_GPIO_Port, ROW_1_Pin);
-    if (!oldState && newState) {
-      HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-      buffer[3] = 0x1e;
-      USBD_HID_SendReport(&hUsbDeviceFS, buffer, 8);
-      HAL_Delay(100);
-      buffer[3] = 0x00;
-      USBD_HID_SendReport(&hUsbDeviceFS, buffer, 8);
+    keymatrix_scan(matrix);
+    if (matrix[0][0]) {
+      keymatrix_send_key(KEY_MOD_LCTRL, KEY_C);
+    } else if (matrix[0][1]) {
+      keymatrix_send_key(KEY_MOD_LCTRL, KEY_V);
+    } else if (matrix[0][2]) {
+      keymatrix_send_key(KEY_MOD_LCTRL | KEY_MOD_LSHIFT, KEY_N);
+    } else if (matrix[1][0]) {
+      keymatrix_send_key(KEY_NONE, KEY_F);
+    } else {
       HAL_Delay(100);
     }
-    oldState = newState;
-    HAL_GPIO_WritePin(COL_1_GPIO_Port, COL_1_Pin, 0);
   }
   /* USER CODE END 3 */
 }
