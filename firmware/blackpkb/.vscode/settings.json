@@ -2,6 +2,7 @@
     "files.associations": {
         "keymatrix.h": "c",
         "main.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "profile.h": "c"
     }
 }

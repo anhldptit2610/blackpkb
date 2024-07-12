@@ -105,19 +105,15 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     keymatrix_scan(matrix);
-    if (matrix[0][0]) {
-      keymatrix_send_key(KEY_MOD_LCTRL, KEY_C);
-    } else if (matrix[0][1]) {
-      keymatrix_send_key(KEY_MOD_LCTRL, KEY_V);
-    } else if (matrix[0][2]) {
-      keymatrix_send_key(KEY_MOD_LCTRL | KEY_MOD_LSHIFT, KEY_N);
-    } else if (matrix[1][0]) {
-      keymatrix_send_key(KEY_NONE, KEY_F);
-    } else {
-      HAL_Delay(100);
+    for (int i = 0; i < KEYMATRIX_ROW; i++) {
+      for (int j = 0; j < KEYMATRIX_COL; j++) {
+        if (matrix[i][j])
+          keymatrix_send_key(i, j);
+      }
     }
-  }
+    HAL_Delay(100);
   /* USER CODE END 3 */
+  }
 }
 
 /**

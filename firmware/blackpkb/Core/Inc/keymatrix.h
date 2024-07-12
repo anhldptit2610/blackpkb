@@ -7,6 +7,11 @@
 #include <stdbool.h>
 #include "main.h"
 
+typedef struct {
+    uint8_t modifier;
+    uint8_t key;
+} key_profile_t;
+
 typedef union {
     uint8_t instance[8];
     struct {
@@ -22,7 +27,7 @@ typedef union {
 } key_report_t;
 
 void keymatrix_scan(bool matrix[KEYMATRIX_ROW][KEYMATRIX_COL]);
-void keymatrix_send_key(uint8_t modifier, uint8_t key);
+void keymatrix_send_key(uint8_t row, uint8_t col);
 void keymatrix_init(void);
 
 #endif
