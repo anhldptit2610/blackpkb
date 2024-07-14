@@ -12,7 +12,7 @@ my opinion); so I created this macropad. It is just a regular macropad; user can
 the functionality of each key, or create a specific profile. Profiles can be switched by 
 pressing 4 keys on the left simultaneously.
 
-## dependencies
+## Dependencies
 
  * arm-none-eabi-gcc
  * make
