@@ -2,7 +2,7 @@
 
 A custom macropad made for daily use.
 
-![blackpkb PCB](/images/blackpkb.jpeg =300x300)
+![blackpkb PCB](/images/blackpkb.jpeg =280x280)
 
 ## dependencies
 
