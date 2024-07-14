@@ -8,11 +8,23 @@ A custom macropad made for daily use.
 Having a keyboard which we can customize how it works is amazing, especially when working
 with CAD softwares. As a electronic hobbyist, I use KiCAD to draw the PCB for my projects. 
 Pressing hotkeys when drawing schematic or PCB is a nuisance if using regular keyboard(in 
-my opinion); so I created this macropad. It is just a regular macropad; user can customize 
-the functionality of each key, or create a specific profile. Profiles can be switched by 
-pressing 4 keys on the left simultaneously.
+my opinion); so I created this macropad.
 
-## Dependencies
+## Features
+
+- [x] Customize function for each key
+- [x] Create profiles
+- [x] Switch between profiles by pressing **KEY button** on the dev board
+
+## Requirements
+
+### Hardware
+ 
+ * WeAct's STM32F411CEU6 development board(BlackPill)
+ * 1N4148 diodes
+ * key switches(I desoldered these from a broken keyboard lol)
+
+### Software
 
  * arm-none-eabi-gcc
  * make
