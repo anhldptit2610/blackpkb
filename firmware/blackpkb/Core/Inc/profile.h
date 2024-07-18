@@ -10,6 +10,7 @@ typedef enum {
 } matrix_profile_t;
 
 int get_profile_number(void);
+void profile_switch(void);
 void profile_select(int profile);
 
 #endif

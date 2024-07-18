@@ -26,8 +26,15 @@ typedef union {
     };
 } key_report_t;
 
+typedef enum {
+    VOL_UP,
+    VOL_DOWN,
+    VOL_MUTE,
+} vol_action_t;
+
 void keymatrix_scan(bool matrix[KEYMATRIX_ROW][KEYMATRIX_COL]);
 void keymatrix_send_key(uint8_t row, uint8_t col);
 void keymatrix_init(void);
+void encoder_adjust_volume(vol_action_t action);
 
 #endif

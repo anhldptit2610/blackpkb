@@ -44,6 +44,6 @@ You can use ST's STM32CubeProgrammer to flash the binary.
 
 ## TODO
 
-- [ ] Use rotary encoder to adjust volume
+- [x] Use rotary encoder to adjust volume
 - [ ] Add LED for each key
 - [ ] Make a 3D printed case

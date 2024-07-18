@@ -1,20 +1,20 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2024 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+// /**
+//   ******************************************************************************
+//   * @file           : main.c
+//   * @brief          : Main program body
+//   ******************************************************************************
+//   * @attention
+//   *
+//   * Copyright (c) 2024 STMicroelectronics.
+//   * All rights reserved.
+//   *
+//   * This software is licensed under terms that can be found in the LICENSE file
+//   * in the root directory of this software component.
+//   * If no LICENSE file comes with this software, it is provided AS-IS.
+//   *
+//   ******************************************************************************
+//   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -45,15 +45,21 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+TIM_HandleTypeDef htim10;
+TIM_HandleTypeDef htim11;
 
 /* USER CODE BEGIN PV */
 bool matrix[KEYMATRIX_ROW][KEYMATRIX_COL];
 int matrixProfile = 0;
+volatile bool encoderA, encoderB, cw, ccw, scanned, encoderPressed,
+              oldEncoder, newEncoder;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_TIM10_Init(void);
+static void MX_TIM11_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -65,6 +71,54 @@ void matrix_reset(void)
   for (int i = 0; i < KEYMATRIX_ROW; i++)
     for (int j = 0; j < KEYMATRIX_COL; j++)
       matrix[i][j] = 0;
+}
+
+void read_encoder(void)
+{
+  static int state = 0;
+
+  encoderA = HAL_GPIO_ReadPin(ENCODER_A_GPIO_Port, ENCODER_A_Pin);
+  encoderB = HAL_GPIO_ReadPin(ENCODER_B_GPIO_Port, ENCODER_B_Pin);
+  switch (state) {
+  case 0:
+    if (!encoderA)
+      state = 1;
+    else if (!encoderB)
+      state = 4;
+    break;
+  case 1:
+    if (!encoderB)
+      state = 2;
+    break;
+  case 2:
+    if (encoderA)
+      state = 3;
+    break;
+  case 3:
+    if (encoderA && encoderB) {
+      state = 0; 
+      cw = 1;
+      ccw = 0;
+    }
+    break;
+  case 4:
+    if (!encoderA)
+      state = 5;
+    break;
+  case 5:
+    if (encoderB)
+      state = 6;
+    break;
+  case 6:
+    if (encoderA && encoderB) {
+      state = 0;
+      cw = 0;
+      ccw = 1;
+    }
+    break;
+  default:
+    break;
+  }
 }
 /* USER CODE END 0 */
 
@@ -97,9 +151,15 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
+  MX_TIM10_Init();
+  MX_TIM11_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_Base_Start_IT(&htim11);
   keymatrix_init();
   matrix_reset();
+  cw = ccw = scanned = false;
+  encoderPressed = true;
+  HAL_GPIO_WritePin(ENCODER_GND_GPIO_Port, ENCODER_GND_Pin, 0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -109,22 +169,34 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    keymatrix_scan(matrix);
-    if (matrix[0][0] && matrix[1][0] && matrix[0][1] && matrix[1][1]) {
-      profile_select(matrixProfile);
-      matrixProfile = (matrixProfile + 1) % get_profile_number();
-      matrix_reset();
-    } else {
+    read_encoder();
+    if (cw) {
+      cw = 0;
+      encoder_adjust_volume(VOL_UP);
+    } else if (ccw) {
+      ccw = 0;
+      encoder_adjust_volume(VOL_DOWN);
+    }
+
+    if (scanned) {
+      scanned = false;
+      if (encoderPressed) {
+        encoderPressed = 0;
+        HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+        profile_switch();
+      }
       for (int i = 0; i < KEYMATRIX_ROW; i++) {
         for (int j = 0; j < KEYMATRIX_COL; j++) {
-          if (matrix[i][j])
+          if (matrix[i][j]) {
+            HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin);
             keymatrix_send_key(i, j);
+          }
         }
       }
     }
-    HAL_Delay(100);
-  /* USER CODE END 3 */
+    HAL_Delay(1);
   }
+  /* USER CODE END 3 */
 }
 
 /**
@@ -175,6 +247,68 @@ void SystemClock_Config(void)
 }
 
 /**
+  * @brief TIM10 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM10_Init(void)
+{
+
+  /* USER CODE BEGIN TIM10_Init 0 */
+
+  /* USER CODE END TIM10_Init 0 */
+
+  /* USER CODE BEGIN TIM10_Init 1 */
+
+  /* USER CODE END TIM10_Init 1 */
+  htim10.Instance = TIM10;
+  htim10.Init.Prescaler = 16000 - 1;
+  htim10.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim10.Init.Period = 1 - 1;
+  htim10.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim10.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim10) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM10_Init 2 */
+
+  /* USER CODE END TIM10_Init 2 */
+
+}
+
+/**
+  * @brief TIM11 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM11_Init(void)
+{
+
+  /* USER CODE BEGIN TIM11_Init 0 */
+
+  /* USER CODE END TIM11_Init 0 */
+
+  /* USER CODE BEGIN TIM11_Init 1 */
+
+  /* USER CODE END TIM11_Init 1 */
+  htim11.Instance = TIM11;
+  htim11.Init.Prescaler = 16000;
+  htim11.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim11.Init.Period = 100 - 1;
+  htim11.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim11.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim11) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM11_Init 2 */
+
+  /* USER CODE END TIM11_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -188,14 +322,17 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, COL_1_Pin|COL_2_Pin|COL_3_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_YELLOW_Pin|LED_RED_Pin|LED_GREEN_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, ENCODER_GND_Pin|COL_1_Pin|COL_2_Pin|COL_3_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : LED_Pin */
   GPIO_InitStruct.Pin = LED_Pin;
@@ -204,12 +341,31 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : COL_1_Pin COL_2_Pin COL_3_Pin */
-  GPIO_InitStruct.Pin = COL_1_Pin|COL_2_Pin|COL_3_Pin;
+  /*Configure GPIO pins : LED_YELLOW_Pin LED_RED_Pin LED_GREEN_Pin */
+  GPIO_InitStruct.Pin = LED_YELLOW_Pin|LED_RED_Pin|LED_GREEN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : ENCODER_B_Pin ENCODER_A_Pin */
+  GPIO_InitStruct.Pin = ENCODER_B_Pin|ENCODER_A_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : ENCODER_GND_Pin COL_1_Pin COL_2_Pin COL_3_Pin */
+  GPIO_InitStruct.Pin = ENCODER_GND_Pin|COL_1_Pin|COL_2_Pin|COL_3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : ENCODER_SW_Pin */
+  GPIO_InitStruct.Pin = ENCODER_SW_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(ENCODER_SW_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : ROW_1_Pin ROW_2_Pin */
   GPIO_InitStruct.Pin = ROW_1_Pin|ROW_2_Pin;
@@ -222,7 +378,20 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  // Check which version of the timer triggered this callback and toggle LED
+  if (htim == &htim11) {
+    scanned = true;
+    HAL_GPIO_WritePin(ENCODER_GND_GPIO_Port, ENCODER_GND_Pin, 0);
+    newEncoder = HAL_GPIO_ReadPin(ENCODER_SW_GPIO_Port, ENCODER_SW_Pin);
+    encoderPressed = !newEncoder && oldEncoder;
+    oldEncoder = newEncoder;
+    // encoderPressed = HAL_GPIO_ReadPin(ENCODER_SW_GPIO_Port, ENCODER_SW_Pin);
+    HAL_GPIO_WritePin(ENCODER_GND_GPIO_Port, ENCODER_GND_Pin, 1);
+    keymatrix_scan(matrix);
+  }
+}
 /* USER CODE END 4 */
 
 /**
@@ -232,11 +401,11 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+//   /* User can add his own implementation to report the HAL error return state */
+//   __disable_irq();
+//   while (1)
+//   {
+//   }
   /* USER CODE END Error_Handler_Debug */
 }
 
@@ -251,8 +420,8 @@ void Error_Handler(void)
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
-  /* User can add his own implementation to report the file name and line number,
-     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+//   /* User can add his own implementation to report the file name and line number,
+//      ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */

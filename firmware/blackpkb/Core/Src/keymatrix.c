@@ -12,6 +12,7 @@ typedef struct {
 } macropad_key_t;
 
 extern key_profile_t profileList[][KEYMATRIX_ROW][KEYMATRIX_COL];
+extern key_profile_t soundProfile[];
 extern int whichProfile;
 
 #define UP      1
@@ -57,6 +58,17 @@ void keymatrix_send_key(uint8_t row, uint8_t col)
     USBD_HID_SendReport(&hUsbDeviceFS, report.instance, 8);
 }
 
+void encoder_adjust_volume(vol_action_t action)
+{
+    report.modifier = soundProfile[action].modifier;
+    report.key1 = soundProfile[action].key;
+    USBD_HID_SendReport(&hUsbDeviceFS, report.instance, 8);
+    HAL_Delay(20);
+    report.modifier = 0x00;
+    report.key1 = 0x00;
+    USBD_HID_SendReport(&hUsbDeviceFS, report.instance, 8);
+}
+
 void keymatrix_scan(bool keyMatrix[KEYMATRIX_ROW][KEYMATRIX_COL])
 {
     keymatrix_pull_col(1, UP);
@@ -80,7 +92,7 @@ void keymatrix_init(void)
     keyMatrix[0][0].pin = keyMatrix[0][1].pin = keyMatrix[0][2].pin = ROW_1_Pin;
     keyMatrix[1][0].pin = keyMatrix[1][1].pin = keyMatrix[1][2].pin = ROW_2_Pin;
 
-    profile_select(BROWSER_PROFILE);
+    profile_select(kiCAD_PROFILE);
 
     for (int i = 0; i < KEYMATRIX_ROW; i++)
         for (int j = 0; j < KEYMATRIX_COL; j++)
