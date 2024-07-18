@@ -12,8 +12,8 @@ my opinion); so I created this project.
 
 ## Features
 
-- [x] Customize function for each key
-- [x] Create profiles(see [this docs](/docs/create-profile.md) for a howto)
+- [x] Customizable function for each key
+- [x] Custom profiles(see [this docs](/docs/create-profile.md) for a howto)
 - [x] Switch between profiles by pressing built-in rotary encoder button
 - [x] adjust volume up/down(You need to map custom key shortcut for volume up/down)
 
@@ -21,16 +21,16 @@ my opinion); so I created this project.
 
 ### Hardware
  
- * WeAct's STM32F411CEU6 development board(BlackPill)
- * 1N4148 diodes
+ * 1x WeAct's STM32F411CEU6 development board(the BlackPill one)
+ * 6x 1N4148 diodes
  * key switches(I desoldered these from a broken keyboard lol)
  * 3x 1kOhm resistor
- * 3 3mm LEDs, different color(mine is green, red and yellow)
- * a mechanical rotary encoder
+ * 3x 3mm LEDs, different color(mine is green, red and yellow)
+ * a rotary encoder
 
 ### Software
 
- * arm-none-eabi-gcc
+ * arm-none-eabi-gcc(my version is 10.3.1)
  * make
 
 You can install above dependencies by using these commands(Ubuntu/any Debian based Linux distro):
@@ -44,7 +44,7 @@ You can install above dependencies by using these commands(Ubuntu/any Debian bas
     $ cd blackpkb/firmware/blackpkb
     $ make
 
-You can use ST's STM32CubeProgrammer to flash the binary.
+You can use the ST's STM32CubeProgrammer to flash the binary.
 
 ## TODO
 
