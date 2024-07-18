@@ -42,7 +42,7 @@ int get_profile_number(void)
 void profile_switch(void)
 {
     static int i = 0;
-    i = (i + 1) % 2;
+    i = (i + 1) % (get_profile_number() - 1);
     profile_select(i);
 }
 

@@ -3,18 +3,19 @@
 A custom macropad made for daily use.
 
 <!-- ![blackpkb PCB](/images/blackpkb.jpeg =280x280) -->
-<img src="/images/blackpkb.jpeg" width="192" height="256">
+<img src="/images/blackpkb.jpeg" width="256" height="256">
 
-Having a keyboard which we can customize how it works is amazing, especially when working
-with CAD softwares. As a electronic hobbyist, I use KiCAD to draw the PCB for my projects. 
+Having a macro pad which we can customize how it works is amazing, especially when working
+with CAD softwares. As a electronic hobbyist, I always use KiCAD to draw the PCB for my projects. 
 Pressing hotkeys when drawing schematic or PCB is a nuisance if using regular keyboard(in 
-my opinion); so I created this macropad.
+my opinion); so I created this project.
 
 ## Features
 
 - [x] Customize function for each key
-- [x] Create profiles
-- [x] Switch between profiles by pressing **KEY button** on the dev board
+- [x] Create profiles(see [this docs](/docs/create-profile.md) for a howto)
+- [x] Switch between profiles by pressing built-in rotary encoder button
+- [x] adjust volume up/down(You need to map custom key shortcut for volume up/down)
 
 ## Requirements
 
@@ -23,6 +24,9 @@ my opinion); so I created this macropad.
  * WeAct's STM32F411CEU6 development board(BlackPill)
  * 1N4148 diodes
  * key switches(I desoldered these from a broken keyboard lol)
+ * 3x 1kOhm resistor
+ * 3 3mm LEDs, different color(mine is green, red and yellow)
+ * a mechanical rotary encoder
 
 ### Software
 

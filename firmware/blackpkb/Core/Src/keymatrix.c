@@ -92,7 +92,7 @@ void keymatrix_init(void)
     keyMatrix[0][0].pin = keyMatrix[0][1].pin = keyMatrix[0][2].pin = ROW_1_Pin;
     keyMatrix[1][0].pin = keyMatrix[1][1].pin = keyMatrix[1][2].pin = ROW_2_Pin;
 
-    profile_select(kiCAD_PROFILE);
+    profile_select(0);
 
     for (int i = 0; i < KEYMATRIX_ROW; i++)
         for (int j = 0; j < KEYMATRIX_COL; j++)
