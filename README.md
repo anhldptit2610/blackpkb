@@ -2,8 +2,7 @@
 
 A custom macropad made for daily use.
 
-<!-- ![blackpkb PCB](/images/blackpkb.jpeg =280x280) -->
-<img src="/images/blackpkb.jpeg" width="256" height="256">
+<img src="/images/blackpkb_v2.jpg" width="192" height="256">
 
 Having a macro pad which we can customize how it works is amazing, especially when working
 with CAD softwares. As a electronic hobbyist, I always use KiCAD to draw the PCB for my projects. 
