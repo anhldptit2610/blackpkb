@@ -16,13 +16,13 @@ key_profile_t profileList[][KEYMATRIX_ROW][KEYMATRIX_COL] = {
         [1][1] = {.modifier = KEY_NONE, .key = KEY_4},
         [1][2] = {.modifier = KEY_NONE, .key = KEY_5},
     },
-    [BROWSER_PROFILE] = {
+    [CHROME_PROFILE] = {
         [0][0] = {.modifier = KEY_MOD_LCTRL, .key = KEY_C},
-        [0][1] = {.modifier = KEY_MOD_LCTRL, .key = KEY_V},
-        [0][2] = {.modifier = KEY_MOD_LCTRL | KEY_MOD_LSHIFT, .key = KEY_N},
-        [1][0] = {.modifier = KEY_NONE, .key = KEY_D},
-        [1][1] = {.modifier = KEY_NONE, .key = KEY_E},
-        [1][2] = {.modifier = KEY_NONE, .key = KEY_F},
+        [1][0] = {.modifier = KEY_MOD_LCTRL, .key = KEY_V},
+        [0][1] = {.modifier = KEY_NONE, .key = KEY_F5},
+        [1][1] = {.modifier = KEY_MOD_LCTRL | KEY_MOD_LSHIFT, .key = KEY_N},
+        [0][2] = {.modifier = KEY_MOD_LCTRL, .key = KEY_W},
+        [1][2] = {.modifier = KEY_MOD_LCTRL, .key = KEY_T},
     },
     {}
 };

@@ -6,7 +6,7 @@
 
 typedef enum {
     kiCAD_PROFILE,
-    BROWSER_PROFILE
+    CHROME_PROFILE
 } matrix_profile_t;
 
 int get_profile_number(void);
